@@ -4,7 +4,9 @@ import sublime_plugin
 class RrlViewerCommand(sublime_plugin.TextCommand):
 	def _init_(self):
 		self.SETTINGS = sublime.load_settings("RtlViewer.sublime-settings")
+		
 	def run(self, edit):
+		self._init_()
 		sel = self.view.sel()
 		region1 = sel[0]
 		ch = self.view.substr(region1)
