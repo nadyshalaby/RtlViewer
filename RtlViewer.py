@@ -1,7 +1,7 @@
 import sublime
 import sublime_plugin
 
-class RrlViewer(sublime_plugin.TextCommand):
+class RrlViewerCommand(sublime_plugin.TextCommand):
 	def _init_(self):
 		self.SETTINGS = sublime.load_settings("RtlViewer.sublime-settings")
 	def run(self, edit):
